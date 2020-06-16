@@ -1,1 +1,22 @@
 
+const nome = 'Adriana'
+const sexo = 'F'
+const idade = 50 
+const contribuicao = 35
+const tempocontribuicao = idade + contribuicao
+
+//O tempo de contribuição mínimo para homens é de 35 anos e, para mulheres, 30 anos;
+//Utilizando a regra 85-95, a soma da idade com o tempo de contribuição do homem precisa ser de no mínimo 95 anos, enquanto a mulher precisa ter no mínimo 85 anos na soma;
+//Com base nas regras acima imprima na tela as mensagens:
+
+//SE a pessoa estiver aposentada: Silvana, você pode se aposentar!;
+//SE a pessoa NÃO estiver aposentada: Silvana, você ainda não pode se aposentar!;
+
+const homemaposenta = sexo == 'M' && contribuicao >=35 && tempocontribuicao  >= 95
+const mulheraposenta = sexo == 'F' && contribuicao >= 30 && tempocontribuicao >= 85
+
+if ( homemaposenta || mulheraposenta){ 
+    console.log(`${nome} voce pode aposentar`)
+}else {
+    console.log(`${nome} voce não pode aposentar`)
+}
